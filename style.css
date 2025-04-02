@@ -1,81 +1,109 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     height: 100vh;
-    width: 100vw;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://source.unsplash.com/1920x1080/?landscape");
+    color: #333;
 }
 
-.caixa-maior {
-    background-color: black;
-    opacity: 0.8;
-    border-radius: 25px;
-    padding: 20px;
-    width: 95%;
-    max-width: 450px;
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
 .input-cidade {
+    padding: 12px 15px;
+    width: 70%;
     border: none;
-    outline: none;
-    padding: 10px;
     border-radius: 25px;
-    font-size: 18px;
-    background-color: #7c7c7c2b;
-    color: #fff;
-    width: calc(100% - 70px);
-}
-
-.button-buscar {
-    border: none;
+    font-size: 16px;
     outline: none;
-    padding: 10px;
-    border-radius: 50px;
-    background-color: #7c7c7c2b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin-left: 10px;
     cursor: pointer;
-    float: right;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-.img-buscar {
-    width: 20px;
+button:hover {
+    background-color: #2980b9;
 }
 
-.caixa-media {
+.resultado {
     margin-top: 30px;
+    display: none;
 }
 
 .cidade {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .tempo {
-    font-size: 20px;
-    color: #fff;
-    margin-top: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
 }
 
-.caixa-menor {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+.img-previsao {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
 }
 
 .texto-previsao {
-    color: #fff;
-    margin-left: 20px;
+    font-size: 18px;
+    margin: 10px 0;
+    text-transform: capitalize;
 }
 
 .umidade {
-    color: #fff;
-    margin-top: 30px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.loading {
+    display: none;
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.erro {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
 }
